@@ -317,6 +317,7 @@ body {
 }
 .actions .actions__step {
   flex: 25%;
+  max-width: 394px;
 }
 .actions .actions__step h1 {
   font-size: 100px;
@@ -333,7 +334,23 @@ body {
   color: var(--cyan-color);
   cursor: pointer;
 }
+.actions .actions__step .text {
+  margin-top: 10px;
+  display: flex;
+}
+.actions .actions__step .text p {
+  font-size: 18px;
+  color: var(--title-color);
+  line-height: 33px;
+}
+.actions .actions__step .text img {
+  margin-top: -60px;
+}
+.actions .actions__step:nth-child(6) {
+  margin-left: 750px;
+  margin-top: -500px;
+}
 .actions img {
   position: static;
-  float: left;
+  margin-top: -250px;
 }/*# sourceMappingURL=styles.css.map */

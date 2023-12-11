@@ -328,6 +328,7 @@ body {
   flex-wrap: wrap;
   .actions__step {
     flex: 25%;
+    max-width: 394px;
     h1 {
       font-size: 100px;
       font-weight: 900;
@@ -343,10 +344,29 @@ body {
         cursor: pointer;
       }
     }
+    .text {
+      margin-top: 10px;
+      display: flex;
+      
+      p {
+        font-size: 18px;
+        color: var(--title-color);
+        line-height: 33px;
+      }
+      img {
+        margin-top: -60px;
 
+      }
+    }
+
+  }
+  .actions__step:nth-child(6){
+    margin-left: 750px;
+    margin-top: -500px;
   }
   img {
     position: static;
-    float: left;
+    margin-top: -250px;
+    // float: left;
   }
 }
