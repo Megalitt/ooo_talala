@@ -451,15 +451,17 @@ body {
 .button__actions h4 span {
   font-weight: 900;
   color: var(--cyan-color);
+  z-index: 100;
   cursor: pointer;
 }
 .button__actions button {
+  z-index: 100;
   width: 251px;
   height: 80px;
   background: #7156FB;
   border-radius: 40px;
   color: var(--title-color);
-  font-style: 20px;
+  font-size: 20px;
   line-height: 24px;
   font-weight: 700;
   cursor: pointer;
