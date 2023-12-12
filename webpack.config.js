@@ -16,8 +16,8 @@ module.exports = {
       favicon: path.resolve(__dirname, 'public', 'favicon.ico')
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].[contenthash:8].css',
-      chunkFilename: 'css/[name].[contenthash:8].css',
+      filename: '[name].[contenthash:8].css',
+      chunkFilename: '[name].[contenthash:8].css',
     }),
     new CopyPlugin({
       patterns: [{ from: './src/image', to: 'image' }],
@@ -32,9 +32,6 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        loader: MiniCssExtractPlugin.loader,
-      },
       {
         test: /\.s[ac]ss$/i,
         use: [
