@@ -324,12 +324,19 @@ body {
   margin-top: 99px;
   margin-left: 116px;
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  .actions__step {
-    flex: 25%;
-    max-width: 394px;
+  display: grid;
+  grid-template-columns: 348px 252px 320px;
+  grid-template-rows: auto;
+  gap: 61px 101px;
+  grid-template-areas:
+    "item-1 item-2 item-3"
+    ".      .      item-4"
+    ".      .      item-5"
+    ;
+  &__step {
+    // max-width: 394px;
     h1 {
+      font-family: "Montserrat", sans-serif;
       font-size: 100px;
       font-weight: 900;
       line-height: 80px;
@@ -339,34 +346,184 @@ body {
       color: var(--title-color);
       font-size: 26px;
       line-height: 38px;
+      font-weight: 700;
       span {
         color: var(--cyan-color);
         cursor: pointer;
       }
     }
+    .txt {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 33px;
+      span {
+        font-weight: 700;
+        color: var(--title-color);
+      }
+    }
     .text {
       margin-top: 10px;
       display: flex;
-      
       p {
+        width: 200px;
         font-size: 18px;
         color: var(--title-color);
         line-height: 33px;
+        font-weight: 400;
       }
       img {
-        margin-top: -60px;
-
+        position: static;
+        margin-top: -120px;
+        margin-left: -10px;
       }
     }
 
   }
-  .actions__step:nth-child(6){
-    margin-left: 750px;
-    margin-top: -500px;
+  &__step:nth-child(1){
+    grid-area: item-1;
+  }
+  &__step:nth-child(2){
+    grid-area: item-2;
+  }
+  &__step:nth-child(3){
+    grid-area: item-3;
+  }
+  &__step:nth-child(4){
+    grid-area: item-4;
+  }
+  &__step:nth-child(5){
+    grid-area: item-5;
   }
   img {
-    position: static;
-    margin-top: -250px;
-    // float: left;
+    position: absolute;
+    top: 206px;
+  }
+}
+.video-view {
+  width: 1123px;
+  height: 306px;
+  margin-top: 99px;
+  margin-left: 116px;
+  display: flex;
+  align-items: center;
+  &__title {
+
+    h2 {
+      width: 740px;
+      height: 176px;
+      font-size: 72px;
+      color: var(--title-color);
+      line-height: 87px;
+      font-weight: 800;
+      span {
+        font-weight: 900;
+        color: var(--cyan-color);
+        cursor: pointer;
+      }
+
+    }
+    .text {
+      margin-top: 20px;
+      width: 458px;
+      font-size: 18px;
+      line-height: 33px;
+      font-weight: 400;
+      color: var(--title-color);
+    }
+  }
+  img {
+    margin-top: 40px;
+  }
+}
+.button__actions {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 108px;
+  width: 1354px;
+  height: 187px;
+  background: linear-gradient(rgba(113, 86, 251, 0.2) 0%, rgba(255, 13, 255, 0.2) 100%);
+  border-radius: 40px;
+  .abs {
+    position: absolute;
+  }
+  .top-row {
+    top: -9px;
+    left: 346px;
+  }
+  .top-line {
+    left: 90px;
+  }
+  .bot-rov {
+    right: 348px;
+    bottom: -9px;
+  }
+  .bot-line {
+    right: 90px;
+  }
+  h4 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 38px;
+    color: var(--title-color);
+    span {
+      font-weight: 900;
+      color: var(--cyan-color);
+      cursor: pointer;
+    }
+
+  }
+  button {
+    width: 251px;
+    height: 80px;
+    background: #7156FB;
+    border-radius: 40px;
+    color: var(--title-color);
+    font-style: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
+
+
+.footer {
+  margin-top: -50px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  height: 882px;
+  .footer__info {
+    z-index: 100;
+    // margin-right: -200px;
+    width: 365px;
+    height: 266px;
+    h4 {
+      width: 344px;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 38px;
+      color: var(--title-color);
+      span {
+        font-weight: 900;
+        color: var(--cyan-color);
+        cursor: pointer;
+      }
+    }
+    p {
+      width: 365px;
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 33px;
+      font-weight: 400;
+      color: var(--title-color);
+    }
+    
+  }
+  img {
+      margin-left: -130px;
   }
 }

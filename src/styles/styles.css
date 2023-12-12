@@ -312,45 +312,192 @@ body {
   margin-top: 99px;
   margin-left: 116px;
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 348px 252px 320px;
+  grid-template-rows: auto;
+  gap: 61px 101px;
+  grid-template-areas: "item-1 item-2 item-3" ".      .      item-4" ".      .      item-5";
 }
-.actions .actions__step {
-  flex: 25%;
-  max-width: 394px;
-}
-.actions .actions__step h1 {
+.actions__step h1 {
+  font-family: "Montserrat", sans-serif;
   font-size: 100px;
   font-weight: 900;
   line-height: 80px;
   color: var(--logo_icon-color);
 }
-.actions .actions__step p {
+.actions__step p {
   color: var(--title-color);
   font-size: 26px;
   line-height: 38px;
+  font-weight: 700;
 }
-.actions .actions__step p span {
+.actions__step p span {
   color: var(--cyan-color);
   cursor: pointer;
 }
-.actions .actions__step .text {
+.actions__step .txt {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 33px;
+}
+.actions__step .txt span {
+  font-weight: 700;
+  color: var(--title-color);
+}
+.actions__step .text {
   margin-top: 10px;
   display: flex;
 }
-.actions .actions__step .text p {
+.actions__step .text p {
+  width: 200px;
   font-size: 18px;
   color: var(--title-color);
   line-height: 33px;
+  font-weight: 400;
 }
-.actions .actions__step .text img {
-  margin-top: -60px;
+.actions__step .text img {
+  position: static;
+  margin-top: -120px;
+  margin-left: -10px;
 }
-.actions .actions__step:nth-child(6) {
-  margin-left: 750px;
-  margin-top: -500px;
+.actions__step:nth-child(1) {
+  grid-area: item-1;
+}
+.actions__step:nth-child(2) {
+  grid-area: item-2;
+}
+.actions__step:nth-child(3) {
+  grid-area: item-3;
+}
+.actions__step:nth-child(4) {
+  grid-area: item-4;
+}
+.actions__step:nth-child(5) {
+  grid-area: item-5;
 }
 .actions img {
-  position: static;
-  margin-top: -250px;
+  position: absolute;
+  top: 206px;
+}
+
+.video-view {
+  width: 1123px;
+  height: 306px;
+  margin-top: 99px;
+  margin-left: 116px;
+  display: flex;
+  align-items: center;
+}
+.video-view__title h2 {
+  width: 740px;
+  height: 176px;
+  font-size: 72px;
+  color: var(--title-color);
+  line-height: 87px;
+  font-weight: 800;
+}
+.video-view__title h2 span {
+  font-weight: 900;
+  color: var(--cyan-color);
+  cursor: pointer;
+}
+.video-view__title .text {
+  margin-top: 20px;
+  width: 458px;
+  font-size: 18px;
+  line-height: 33px;
+  font-weight: 400;
+  color: var(--title-color);
+}
+.video-view img {
+  margin-top: 40px;
+}
+
+.button__actions {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 108px;
+  width: 1354px;
+  height: 187px;
+  background: linear-gradient(rgba(113, 86, 251, 0.2) 0%, rgba(255, 13, 255, 0.2) 100%);
+  border-radius: 40px;
+}
+.button__actions .abs {
+  position: absolute;
+}
+.button__actions .top-row {
+  top: -9px;
+  left: 346px;
+}
+.button__actions .top-line {
+  left: 90px;
+}
+.button__actions .bot-rov {
+  right: 348px;
+  bottom: -9px;
+}
+.button__actions .bot-line {
+  right: 90px;
+}
+.button__actions h4 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 38px;
+  color: var(--title-color);
+}
+.button__actions h4 span {
+  font-weight: 900;
+  color: var(--cyan-color);
+  cursor: pointer;
+}
+.button__actions button {
+  width: 251px;
+  height: 80px;
+  background: #7156FB;
+  border-radius: 40px;
+  color: var(--title-color);
+  font-style: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: -50px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  height: 882px;
+}
+.footer .footer__info {
+  z-index: 100;
+  width: 365px;
+  height: 266px;
+}
+.footer .footer__info h4 {
+  width: 344px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 38px;
+  color: var(--title-color);
+}
+.footer .footer__info h4 span {
+  font-weight: 900;
+  color: var(--cyan-color);
+  cursor: pointer;
+}
+.footer .footer__info p {
+  width: 365px;
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 33px;
+  font-weight: 400;
+  color: var(--title-color);
+}
+.footer img {
+  margin-left: -130px;
 }/*# sourceMappingURL=styles.css.map */
